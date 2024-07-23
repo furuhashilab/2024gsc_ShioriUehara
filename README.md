@@ -11,18 +11,18 @@
 
 ©︎Furuhashi Laboratory/Shiori Uehara, CC BY 4.0
 
-# Abstract
+## Abstract
 
-# Introduction
+## Introduction
 
-# Methods
+## Methods
 
-# Results
+## Results
 
-# Discussion
+## Discussion
 
-# Conclusions
+## Conclusions
 
-# 謝辞
+## 謝辞
 
-# 参考文献リスト
+## 参考文献リスト
