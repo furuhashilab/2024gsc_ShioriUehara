@@ -26,7 +26,7 @@ Mapbox Standardで公開されている相模原キャンパス３Ｄマップ�
 
 # Discussion
 
-## Conclusions
+# Conclusions
 
 # 謝辞
 
