@@ -31,3 +31,4 @@ Mapbox Standardで公開されている相模原キャンパス３Ｄマップ�
 # 謝辞
 
 # 参考文献リスト
+https://docs.google.com/spreadsheets/d/19FtBXse1hFvAzg9a3EQk9c9AlYJWK0-m7P_nXpGIJ4c/edit?usp=sharing
