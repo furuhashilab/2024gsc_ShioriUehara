@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>さがきゃんサウンドマップ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+   <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .marker {
+  background-image: url('https://private-user-images.githubusercontent.com/106800258/408754879-6ace77bc-8ecc-470a-b967-cdb17aa02863.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzgzNjY5NjAsIm5iZiI6MTczODM2NjY2MCwicGF0aCI6Ii8xMDY4MDAyNTgvNDA4NzU0ODc5LTZhY2U3N2JjLThlY2MtNDcwYS1iOTY3LWNkYjE3YWEwMjg2My5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDEzMVQyMzM3NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mN2IzNDc3Y2M5MzUzN2Q2MDA2ZGI4MzFjN2Y3Yzc0ZjBmMWY0ZmY4NGU4ZmJjZDFkYWE4NzBjYjgyZmJmYWU1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.zr1AGpGp7EQR4vQn_VMPCJMLZ3mezIsMF9sWEl-JzZ8');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+     .mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1Ijoic2hpbzIiLCJhIjoiY2xna3Nyd3J2MDY5dDNzcDZ2cXJtaHFobyJ9.izmy0oit5jVyL6NR7QEMUg';
+
+const geojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [139.4012095187714, 35.56732567162428]
+      },
+      properties: {
+        title: 'カフェテリア前',
+        description: 'https://youtu.be/NBUCiViBFgA.'
+      }
+    },
+ {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [139.40314367077053, 35.56733397821966]
+      },
+      properties: {
+        title: 'スタジアム前',
+        description: 'https://youtu.be/Yu8TLY12TEw.'
+      }
+    },
+ {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [139.40186938686847, 35.56561670613349]
+      },
+      properties: {
+        title: 'ガーデン',
+        description: 'https://youtu.be/YelcPXhmIEg.'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [139.40202858718573, 35.566543484071644]
+      },
+      properties: {
+        title: 'チャペル前',
+        description: 'https://youtu.be/1c9IxI_JX2s'
+      }
+    }
+  ]
+};
+    
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v11',
+        center: [-96, 37.8],
+        zoom: 3
+      });
+
+      // マーカーを地図に追加
+for (const feature of geojson.features) {
+  
+  // 各機能のためのHTML要素を作成
+const el = document.createElement('div');
+el.className = 'marker';
+
+  // 各機能のためのマーカーを作成し地図に追加
+  new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
+
+   new mapboxgl.Marker(el)
+  .setLngLat(feature.geometry.coordinates)
+  .setPopup(
+    new mapboxgl.Popup({ offset: 25 }) // ポップアップを追加
+      .setHTML(
+        `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+      )
+  )
+  .addTo(map);
+}
+      
+    </script>
+  </body>
+</html> 
