@@ -65,7 +65,8 @@ Mapbox Standardと[Mapbox GL JS]([url](https://docs.mapbox.com/help/ja/tutorials
 
 ## [出来上がったマップ](https://github.com/furuhashilab/2024gsc_ShioriUehara/blob/main/index.html)
 
-![スクリーンショット 2025-02-01 120240](https://github.com/user-attachments/assets/aefdef44-507d-4595-a0a6-c6a31196b629)
+![スクリーンショット 2025-02-01 142536](https://github.com/user-attachments/assets/1b02f40b-2cf8-4d00-b207-33b1ba2b990c)
+
 
 # Discussion
 　本研究では、「カフェテリア前、チャペル前、スタジアム前、ガーデンの順で音量が大きく、観測される音も多様である」と仮説を立てて研究を進めた。実際は、ガーデンにおいて自然音とJR横浜線の走る音が観測でき、一方で、スタジアム前で部活動の活動音が観測できなかったことから、「カフェテリア前、チャペル前、ガーデン、スタジアム前」の順でにぎやかだった。比較収録したことで、地点によって録音される音の種類に顕著な違いが見られ、学生の移動パターンが分析できた。
